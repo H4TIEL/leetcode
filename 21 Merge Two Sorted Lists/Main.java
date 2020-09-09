@@ -4,10 +4,10 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        ListNode firstList =  new ListNode(1, new ListNode(2, new ListNode(4)));
-        ListNode secondList =  new ListNode(1, new ListNode(3, new ListNode(4)));
+        ListNode firstList = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode secondList = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode mergedList = mergeTwoLists(firstList, secondList);
-        while (mergedList.next != null){
+        while (mergedList != null) {
             System.out.println(mergedList.val);
             mergedList = mergedList.next;
         }
@@ -16,8 +16,8 @@ public class Main {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1);
         ListNode tail = dummy;
-        while(l1.next != null && l2.next != null){
-            if (l1.val <= l2.val){
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
                 tail.next = l1;
                 tail = l1;
                 l1 = l1.next;
@@ -27,8 +27,8 @@ public class Main {
                 l2 = l2.next;
             }
         }
-        if(l1.next != null) tail.next = l1;
-        if(l2.next != null) tail.next = l2;
+        if (l1 != null) tail.next = l1;
+        if (l2 != null) tail.next = l2;
         return dummy.next;
     }
 
