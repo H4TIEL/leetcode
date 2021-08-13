@@ -1,0 +1,14 @@
+# JetBrains
+.idea/
+
+# CMake
+cmake-build-*/
+
+# IntelliJ
+out/
+
+# Python Environment
+venv/
+
+# Node Modules
+node_modules/
